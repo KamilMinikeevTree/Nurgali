@@ -1,0 +1,1068 @@
+﻿<!-- saved from url=(0016)http://localhost -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<style type="text/css">
+* { padding: 0; margin: 0; border: 0; }
+.modal { display: none; position: fixed; z-index: 1; padding-top: 2%; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);}
+.modal-content { background-color: #fefefe; margin: auto; padding: 5px 0px 20px 20px; border: 1px solid #888; width: 70%; height: 87%; }
+#modalContent { border: 0; width: 100%; height: 98%; }
+.modal-frame { border: 0; width: 100%; height: 100%; }
+.close { color: #aaaaaa; float: right; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.close:hover, .close:focus { color: #000; text-decoration: none; cursor: pointer; }
+.back { color: #aaaaaa; float: left; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.back:hover, .back:focus { color: #000; text-decoration: none; cursor: pointer; }
+.tree { color: #aaaaaa; float: left; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.tree:hover, .back:focus { color: #000; text-decoration: none; cursor: pointer; }
+</style>
+</head>
+<body>
+<div id="myModal" class="modal">
+	<div class="modal-content">
+		<span class="back">&larr;</span>
+		<span class="close">&times;</span>
+		<span class="tree">&uarr;</span>
+		<div id="modalContent"></div>
+	</div>
+</div>
+<script>
+	var currpos = 0;
+	var currgid = 0;
+	window.addEventListener('message', function(event) { if(event.data.event_id === 'gmsg'){ currgid=event.data.data; }});
+	var modal = document.getElementById("myModal");
+	function closemodal() {
+		modal.style.display = "none";
+		currpos = 0;
+	}
+	var spanback = document.getElementsByClassName("back")[0];
+	spanback.onclick = function() {
+		if( currpos > 1 ) {
+			window.history.back();
+			currpos -= 2;
+		}
+		else
+			closemodal();
+	}
+	var spanx = document.getElementsByClassName("close")[0];
+	spanx.onclick = function() { closemodal(); }
+	var spantree = document.getElementsByClassName("tree")[0];
+	spantree.onclick = function() {
+		closemodal();
+		var elmnt = document.getElementById(currgid);
+		elmnt.scrollIntoView();
+	}
+	nodeclick = function(i) {
+		document.getElementById("modalContent").innerHTML = '<iframe id="idetail" onload="currpos+=1;" src="index.html.files/p' + i + '.html?s=40e5f10ccff37379" class="modal-frame"></iframe>';
+		modal.style.display = "block";
+	}
+	window.onclick = function(event) {
+		if (event.target == modal)
+			closemodal();
+	}
+</script>
+
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="2690" height="683" xmlns:at="https://genery.com/ru">
+	<defs>
+		<style type="text/css">
+			<![CDATA[
+				.s0 { fill:#FFFFFF;stroke:none; }
+				.s1 { fill:#FFF7E5;stroke:none; }
+				.s2 { stroke:#696969;stroke-width:2;stroke-linecap:square; }
+				.s3 { fill:none;stroke:#696969;stroke-width:2; }
+				.s4 { cursor:pointer; }
+				.s5 { fill:#FF9368;stroke:none; }
+				.s6 { font-size:12px;font-style:normal;font-weight:normal;font-family:Tahoma;fill:#000000; }
+				.s7 { fill:#000000;stroke:#FFFFFF;stroke-width:1; }
+				.s8 { fill:none;stroke:#606060;stroke-width:1; }
+				.s9 { fill:#FBD27A;stroke:none; }
+				.s10 { fill:#92DDF9;stroke:none; }
+			]]>
+		</style>
+	</defs>
+	<g id="g1"/>
+	<g id="g2">
+		<rect id="r669" class="s0" x="0" y="0" width="2689" height="683"/>
+		<rect id="r670" class="s0" x="0" y="0" width="2690" height="160"/>
+		<rect id="r671" class="s1" x="0" y="159" width="2690" height="144"/>
+		<rect id="r672" class="s0" x="0" y="302" width="2690" height="144"/>
+		<rect id="r673" class="s1" x="0" y="445" width="2690" height="128"/>
+		<rect id="r674" class="s0" x="0" y="572" width="2690" height="111"/>
+	</g>
+	<g id="g3" transform="translate(20,20)">
+		<g id="g4">
+			<line id="l604" class="s2" x1="1526" y1="35" x2="1546" y2="35"/>
+			<line id="l605" class="s2" x1="561" y1="186" x2="581" y2="186"/>
+			<line id="l606" class="s2" x1="1202" y1="178" x2="1222" y2="178"/>
+			<line id="l607" class="s2" x1="1666" y1="203" x2="1686" y2="203"/>
+			<line id="l608" class="s2" x1="2335" y1="186" x2="2355" y2="186"/>
+			<line id="l609" class="s2" x1="116" y1="320" x2="136" y2="320"/>
+			<line id="l610" class="s2" x1="443" y1="337" x2="463" y2="337"/>
+			<line id="l611" class="s2" x1="566" y1="337" x2="586" y2="337"/>
+			<line id="l612" class="s2" x1="847" y1="329" x2="867" y2="329"/>
+			<line id="l613" class="s2" x1="1120" y1="329" x2="1140" y2="329"/>
+			<line id="l614" class="s2" x1="1453" y1="337" x2="1473" y2="337"/>
+			<line id="l615" class="s2" x1="1731" y1="329" x2="1751" y2="329"/>
+			<line id="l616" class="s2" x1="2043" y1="329" x2="2063" y2="329"/>
+			<line id="l617" class="s2" x1="2210" y1="329" x2="2230" y2="329"/>
+			<line id="l618" class="s2" x1="2465" y1="321" x2="2485" y2="321"/>
+			<line id="l619" class="s2" x1="499" y1="463" x2="519" y2="463"/>
+			<line id="l620" class="s2" x1="1315" y1="480" x2="1335" y2="480"/>
+			<line id="l621" class="s2" x1="488" y1="139" x2="488" y2="159.390625"/>
+			<line id="l622" class="s2" x1="1294" y1="139" x2="1294" y2="159.390625"/>
+			<line id="l623" class="s2" x1="1453" y1="-6" x2="1453" y2="0"/>
+			<rect id="r624" class="s3" x="1450" y="-12" width="6" height="6"/>
+			<line id="l625" class="s2" x1="1536" y1="35" x2="1536" y2="139"/>
+			<line id="l626" class="s2" x1="1611" y1="139" x2="1611" y2="159.390625"/>
+			<line id="l627" class="s2" x1="2428" y1="139" x2="2428" y2="159.390625"/>
+			<line id="l628" class="s2" x1="2585" y1="139" x2="2585" y2="159.390625"/>
+			<line id="l629" class="s2" x1="488" y1="139" x2="2585" y2="139"/>
+			<line id="l630" class="s2" x1="206" y1="282" x2="206" y2="302.296875"/>
+			<line id="l631" class="s2" x1="515" y1="282" x2="515" y2="302.296875"/>
+			<line id="l632" class="s2" x1="571" y1="186" x2="571" y2="282"/>
+			<line id="l633" class="s2" x1="935" y1="282" x2="935" y2="302.296875"/>
+			<line id="l634" class="s2" x1="1212" y1="178" x2="1212" y2="302.296875"/>
+			<line id="l635" class="s2" x1="1536" y1="282" x2="1536" y2="302.296875"/>
+			<line id="l636" class="s2" x1="1676" y1="203" x2="1676" y2="282"/>
+			<line id="l637" class="s2" x1="1817" y1="282" x2="1817" y2="302.296875"/>
+			<line id="l638" class="s2" x1="2137" y1="282" x2="2137" y2="302.296875"/>
+			<line id="l639" class="s2" x1="2345" y1="186" x2="2345" y2="282"/>
+			<line id="l640" class="s2" x1="2554" y1="282" x2="2554" y2="302.296875"/>
+			<line id="l641" class="s2" x1="2137" y1="282" x2="2554" y2="282"/>
+			<line id="l642" class="s2" x1="1536" y1="282" x2="1817" y2="282"/>
+			<line id="l643" class="s2" x1="206" y1="282" x2="935" y2="282"/>
+			<line id="l644" class="s2" x1="59" y1="425" x2="59" y2="445.203125"/>
+			<line id="l645" class="s2" x1="126" y1="320" x2="126" y2="425"/>
+			<line id="l646" class="s2" x1="193" y1="425" x2="193" y2="445.203125"/>
+			<line id="l647" class="s2" x1="453" y1="337" x2="453" y2="445.203125"/>
+			<line id="l648" class="s2" x1="726" y1="425" x2="726" y2="445.203125"/>
+			<line id="l649" class="s2" x1="855" y1="425" x2="855" y2="445.203125"/>
+			<line id="l650" class="s2" x1="857" y1="329" x2="857" y2="425"/>
+			<line id="l651" class="s2" x1="988" y1="425" x2="988" y2="445.203125"/>
+			<line id="l652" class="s2" x1="1130" y1="329" x2="1130" y2="445.203125"/>
+			<line id="l653" class="s2" x1="1396" y1="425" x2="1396" y2="445.203125"/>
+			<line id="l654" class="s2" x1="1463" y1="337" x2="1463" y2="425"/>
+			<line id="l655" class="s2" x1="1529" y1="425" x2="1529" y2="445.203125"/>
+			<line id="l656" class="s2" x1="1677" y1="425" x2="1677" y2="445.203125"/>
+			<line id="l657" class="s2" x1="1741" y1="329" x2="1741" y2="425"/>
+			<line id="l658" class="s2" x1="1804" y1="425" x2="1804" y2="445.203125"/>
+			<line id="l659" class="s2" x1="2053" y1="329" x2="2053" y2="445.203125"/>
+			<line id="l660" class="s2" x1="2414" y1="425" x2="2414" y2="445.203125"/>
+			<line id="l661" class="s2" x1="2475" y1="321" x2="2475" y2="425"/>
+			<line id="l662" class="s2" x1="2537" y1="425" x2="2537" y2="445.203125"/>
+			<line id="l663" class="s2" x1="2414" y1="425" x2="2537" y2="425"/>
+			<line id="l664" class="s2" x1="1677" y1="425" x2="1804" y2="425"/>
+			<line id="l665" class="s2" x1="1396" y1="425" x2="1529" y2="425"/>
+			<line id="l666" class="s2" x1="726" y1="425" x2="988" y2="425"/>
+			<line id="l667" class="s2" x1="59" y1="425" x2="193" y2="425"/>
+			<line id="l668" class="s2" x1="509" y1="463" x2="509" y2="571.625"/>
+		</g>
+		<g id="g5">
+			<g id="g6">
+				<g id="g7" transform="translate(1380.03344726563,0)">
+					<g id="g8">
+						<g id="g9">
+							<g id="g10">
+								<g id="g11" at:id="310" class="s4" onclick="nodeclick(310)">
+									<g id="g176">
+										<rect id="r177" class="s5" x="0.5" y="0.5" width="145.390625" height="68.9375"/>
+										<g id="t179" transform="translate(3,3)">
+											<text id="ts180" x="12.591796875" y="11.484375" class="s6">Биктимиров Нургали</text>
+											<text id="ts181" x="30.5361328125" y="27.96875" class="s6">Биктимирович</text>
+											<text id="ts182" x="0" y="44.453125" class="s6">(17.03.1903 - 26.04.1944)</text>
+											<text id="ts183" x="47.4111328125" y="60.9375" class="s6">Биклянь</text>
+										</g>
+										<polygon id="p178" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r184" class="s8" x="0.5" y="0.5" width="145.390625" height="68.9375"/>
+								</g>
+							</g>
+							<g id="g12" transform="translate(166.390625,0)">
+								<g id="g13" at:id="314" class="s4" onclick="nodeclick(314)">
+									<g id="g185" clip-path="url(#g198)">
+										<rect id="r186" class="s9" x="0.5" y="0.5" width="111.921867370605" height="118.390617370605" rx="10" ry="10"/>
+										<g id="t188" transform="translate(3,3)">
+											<text id="ts189" x="17.291015625" y="11.484375" class="s6">Биктимирова</text>
+											<text id="ts190" x="15.427734375" y="27.96875" class="s6">(Набиуллина)</text>
+											<text id="ts191" x="19.365234375" y="44.453125" class="s6">Минлезямал</text>
+											<text id="ts192" x="16.998046875" y="60.9375" class="s6">Набиулловна</text>
+											<text id="ts193" x="0" y="77.421875" class="s6">(09.06.1903 - 1994)</text>
+											<text id="ts194" x="8.0712890625" y="93.90625" class="s6">Верхние Пинячи</text>
+											<text id="ts195" x="38.4111328125" y="110.390625" class="s6">Жена</text>
+										</g>
+										<polygon id="p187" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r196" class="s8" x="0.5" y="0.5" width="111.921867370605" height="118.390617370605" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g198">
+											<rect id="r199" class="s0" x="0.5" y="0.5" width="111.921867370605" height="118.390617370605" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g14" transform="translate(0,159.390625)">
+				<g id="g15" transform="translate(414.509765625,0)">
+					<g id="g16">
+						<g id="g17">
+							<g id="g18">
+								<g id="g19" at:id="1584" class="s4" onclick="nodeclick(1584)">
+									<g id="g200">
+										<rect id="r201" class="s10" x="0.5" y="0.5" width="145.390625" height="52.453125"/>
+										<g id="t203" transform="translate(3,3)">
+											<text id="ts204" x="16.1044921875" y="11.484375" class="s6">Нургалиев Фахрази</text>
+											<text id="ts205" x="0" y="27.96875" class="s6">(25.04.1926 - 21.12.2005)</text>
+											<text id="ts206" x="59.056640625" y="44.453125" class="s6">Сын</text>
+										</g>
+										<polygon id="p202" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r207" class="s8" x="0.5" y="0.5" width="145.390625" height="52.453125"/>
+								</g>
+							</g>
+							<g id="g20" transform="translate(166.390625,0)">
+								<g id="g21" at:id="1585" class="s4" onclick="nodeclick(1585)">
+									<g id="g208" clip-path="url(#g218)">
+										<rect id="r209" class="s9" x="0.5" y="0.5" width="145.390625" height="68.9375" rx="10" ry="10"/>
+										<g id="t211" transform="translate(3,3)">
+											<text id="ts212" x="15.0673828125" y="11.484375" class="s6">Нургалиева Марьям</text>
+											<text id="ts213" x="34.2919921875" y="27.96875" class="s6">Исмагиловна</text>
+											<text id="ts214" x="0" y="44.453125" class="s6">(23.09.1927 - 23.01.1967)</text>
+											<text id="ts215" x="44.9736328125" y="60.9375" class="s6">Невестка</text>
+										</g>
+										<polygon id="p210" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r216" class="s8" x="0.5" y="0.5" width="145.390625" height="68.9375" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g218">
+											<rect id="r219" class="s0" x="0.5" y="0.5" width="145.390625" height="68.9375" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g22" transform="translate(747.193359375,0)">
+						<g id="g23">
+							<g id="g26">
+								<g id="g27" at:id="324" class="s4" onclick="nodeclick(324)">
+									<g id="g220">
+										<rect id="r221" class="s10" x="0.5" y="0.5" width="39" height="35.96875"/>
+										<g id="t222" transform="translate(3,3)">
+											<text id="ts223" x="0.44140625" y="11.484375" class="s6">Вазых</text>
+											<text id="ts224" x="4.8330078125" y="27.96875" class="s6">Зять</text>
+										</g>
+									</g>
+									<rect id="r225" class="s8" x="0.5" y="0.5" width="39" height="35.96875"/>
+								</g>
+							</g>
+							<g id="g24" transform="translate(60,0)">
+								<g id="g25" at:id="315" class="s4" onclick="nodeclick(315)">
+									<g id="g226" clip-path="url(#g235)">
+										<rect id="r227" class="s9" x="0.5" y="0.5" width="144.17578125" height="52.453125" rx="10" ry="10"/>
+										<g id="t229" transform="translate(3,3)">
+											<text id="ts230" x="13" y="11.484375" class="s6">Биктимирова Гульсина</text>
+											<text id="ts231" x="26.38671875" y="27.96875" class="s6">(15.08.1931 - ?)</text>
+											<text id="ts232" x="55.9677734375" y="44.453125" class="s6">Дочь</text>
+										</g>
+										<polygon id="p228" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r233" class="s8" x="0.5" y="0.5" width="144.17578125" height="52.453125" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g235">
+											<rect id="r236" class="s0" x="0.5" y="0.5" width="144.17578125" height="52.453125" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g28" transform="translate(1140.18701171875,0)">
+						<g id="g29">
+							<g id="g30">
+								<g id="g31" at:id="312" class="s4" onclick="nodeclick(312)">
+									<g id="g237">
+										<rect id="r238" class="s10" x="0.5" y="0.5" width="110.69140625" height="85.421875"/>
+										<g id="t239" transform="translate(3,3)">
+											<text id="ts240" x="0" y="11.484375" class="s6">Биктимиров Ханиф</text>
+											<text id="ts241" x="18.416015625" y="27.96875" class="s6">(15.08.1937)</text>
+											<text id="ts242" x="17.361328125" y="44.453125" class="s6">Лениногорск</text>
+											<text id="ts243" x="41.70703125" y="60.9375" class="s6">Сын</text>
+											<text id="ts244" x="28.0546875" y="77.421875" class="s6">Инженер</text>
+										</g>
+									</g>
+									<rect id="r245" class="s8" x="0.5" y="0.5" width="110.69140625" height="85.421875"/>
+								</g>
+							</g>
+							<g id="g32" transform="translate(131.69140625,0)">
+								<g id="g33" at:id="313" class="s4" onclick="nodeclick(313)">
+									<g id="g246" clip-path="url(#g257)">
+										<rect id="r247" class="s9" x="0.5" y="0.5" width="122.287109375" height="101.90625" rx="10" ry="10"/>
+										<g id="t248" transform="translate(3,3)">
+											<text id="ts249" x="22.4736328125" y="11.484375" class="s6">Биктимирова</text>
+											<text id="ts250" x="0" y="27.96875" class="s6">(Махмутова) Таскира</text>
+											<text id="ts251" x="24.2138671875" y="44.453125" class="s6">(11.05.1942)</text>
+											<text id="ts252" x="39.005859375" y="60.9375" class="s6">Нурлат</text>
+											<text id="ts253" x="33.421875" y="77.421875" class="s6">Невестка</text>
+											<text id="ts254" x="24.849609375" y="93.90625" class="s6">зубной врач</text>
+										</g>
+									</g>
+									<rect id="r255" class="s8" x="0.5" y="0.5" width="122.287109375" height="101.90625" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g257">
+											<rect id="r258" class="s0" x="0.5" y="0.5" width="122.287109375" height="101.90625" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g34" transform="translate(1774.39794921875,0)">
+						<g id="g35">
+							<g id="g38">
+								<g id="g39" at:id="1709" class="s4" onclick="nodeclick(1709)">
+									<g id="g259">
+										<rect id="r260" class="s10" x="0.5" y="0.5" width="145.390625" height="52.453125"/>
+										<g id="t262" transform="translate(3,3)">
+											<text id="ts263" x="32.7919921875" y="11.484375" class="s6">Сагитов Фоат</text>
+											<text id="ts264" x="0" y="27.96875" class="s6">(20.05.1931 - 27.05.2006)</text>
+											<text id="ts265" x="58.0283203125" y="44.453125" class="s6">Зять</text>
+										</g>
+										<polygon id="p261" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r266" class="s8" x="0.5" y="0.5" width="145.390625" height="52.453125"/>
+								</g>
+							</g>
+							<g id="g36" transform="translate(166.390625,0)">
+								<g id="g37" at:id="1713" class="s4" onclick="nodeclick(1713)">
+									<g id="g267" clip-path="url(#g277)">
+										<rect id="r268" class="s9" x="0.5" y="0.5" width="145.390625" height="68.9375" rx="10" ry="10"/>
+										<g id="t270" transform="translate(3,3)">
+											<text id="ts271" x="13" y="11.484375" class="s6">Сагитова (Нургалиева)</text>
+											<text id="ts272" x="50.61328125" y="27.96875" class="s6">Рамзия</text>
+											<text id="ts273" x="0" y="44.453125" class="s6">(12.10.1942 - 03.03.2014)</text>
+											<text id="ts274" x="56.5751953125" y="60.9375" class="s6">Дочь</text>
+										</g>
+										<polygon id="p269" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r275" class="s8" x="0.5" y="0.5" width="145.390625" height="68.9375" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g277">
+											<rect id="r278" class="s0" x="0.5" y="0.5" width="145.390625" height="68.9375" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g40" transform="translate(2107.17919921875,0)">
+						<g id="g41">
+							<g id="g42">
+								<g id="g43" at:id="311" class="s4" onclick="nodeclick(311)">
+									<g id="g279">
+										<rect id="r280" class="s10" x="0.5" y="0.5" width="125.908210754395" height="35.96875"/>
+										<g id="t282" transform="translate(3,3)">
+											<text id="ts283" x="9" y="11.484375" class="s6">Биктимиров Суфиан</text>
+											<text id="ts284" x="49.3154296875" y="27.96875" class="s6">Сын</text>
+										</g>
+										<polygon id="p281" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r285" class="s8" x="0.5" y="0.5" width="125.908210754395" height="35.96875"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g44" transform="translate(0,302.296875)">
+				<g id="g45" transform="translate(28.705078125,0)">
+					<g id="g46">
+						<g id="g47">
+							<g id="g50">
+								<g id="g51" at:id="411" class="s4" onclick="nodeclick(411)">
+									<g id="g286">
+										<rect id="r287" class="s10" x="0.5" y="0.5" width="86.3515625" height="34"/>
+										<g id="t288" transform="translate(3,3)">
+											<text id="ts289" x="0" y="11.484375" class="s6">Васильев Петр</text>
+										</g>
+									</g>
+									<rect id="r290" class="s8" x="0.5" y="0.5" width="86.3515625" height="34"/>
+								</g>
+							</g>
+							<g id="g48" transform="translate(107.3515625,0)">
+								<g id="g49" at:id="416" class="s4" onclick="nodeclick(416)">
+									<g id="g291" clip-path="url(#g300)">
+										<rect id="r292" class="s9" x="0.5" y="0.5" width="139.5078125" height="68.9375" rx="10" ry="10"/>
+										<g id="t293" transform="translate(3,3)">
+											<text id="ts294" x="0" y="11.484375" class="s6">Васильева (Нургалиева)</text>
+											<text id="ts295" x="50.9794921875" y="27.96875" class="s6">Аниса</text>
+											<text id="ts296" x="32.82421875" y="44.453125" class="s6">(23.05.1952)</text>
+											<text id="ts297" x="47.9560546875" y="60.9375" class="s6">Внучка</text>
+										</g>
+									</g>
+									<rect id="r298" class="s8" x="0.5" y="0.5" width="139.5078125" height="68.9375" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g300">
+											<rect id="r301" class="s0" x="0.5" y="0.5" width="139.5078125" height="68.9375" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g52" transform="translate(267.859375,0)">
+						<g id="g53">
+							<g id="g58">
+								<g id="g59" at:id="1580" class="s4" onclick="nodeclick(1580)">
+									<g id="g302" clip-path="url(#g312)">
+										<rect id="r303" class="s9" x="0.5" y="0.5" width="145.390625" height="68.9375" rx="10" ry="10"/>
+										<g id="t305" transform="translate(3,3)">
+											<text id="ts306" x="15.544921875" y="11.484375" class="s6">Нургалеева Фарида</text>
+											<text id="ts307" x="21.7119140625" y="27.96875" class="s6">Мухаметгалеевна</text>
+											<text id="ts308" x="0" y="44.453125" class="s6">(11.07.1951 - 22.07.1992)</text>
+											<text id="ts309" x="44.9736328125" y="60.9375" class="s6">Невестка</text>
+										</g>
+										<polygon id="p304" class="s7" points="1,18 1,11 11,1 18,1 "/>
+									</g>
+									<rect id="r310" class="s8" x="0.5" y="0.5" width="145.390625" height="68.9375" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g312">
+											<rect id="r313" class="s0" x="0.5" y="0.5" width="145.390625" height="68.9375" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+							<g id="g54" transform="translate(166.390625,0)">
+								<g id="g55" at:id="1583" class="s4" onclick="nodeclick(1583)">
+									<g id="g314">
+										<rect id="r315" class="s10" x="0.5" y="0.5" width="102.1484375" height="68.9375"/>
+										<g id="t316" transform="translate(3,3)">
+											<text id="ts317" x="0" y="11.484375" class="s6">Нургалиев Фарид</text>
+											<text id="ts318" x="14.14453125" y="27.96875" class="s6">(09.11.1955)</text>
+											<text id="ts319" x="25.7900390625" y="44.453125" class="s6">Биклянь</text>
+											<text id="ts320" x="35.640625" y="60.9375" class="s6">Внук</text>
+										</g>
+									</g>
+									<rect id="r321" class="s8" x="0.5" y="0.5" width="102.1484375" height="68.9375"/>
+								</g>
+							</g>
+							<g id="g56" transform="translate(289.5390625,0)">
+								<g id="g57" at:id="704" class="s4" onclick="nodeclick(704)">
+									<g id="g322" clip-path="url(#g332)">
+										<rect id="r323" class="s9" x="0.5" y="0.5" width="130.0859375" height="85.421875" rx="10" ry="10"/>
+										<g id="t324" transform="translate(3,3)">
+											<text id="ts325" x="33.17578125" y="11.484375" class="s6">Гимадеева</text>
+											<text id="ts326" x="0" y="27.96875" class="s6">(Гайнетдинова) Римма</text>
+											<text id="ts327" x="17.126953125" y="44.453125" class="s6">Адгаметдиновна</text>
+											<text id="ts328" x="28.11328125" y="60.9375" class="s6">(06.01.1953)</text>
+											<text id="ts329" x="37.3212890625" y="77.421875" class="s6">Невестка</text>
+										</g>
+									</g>
+									<rect id="r330" class="s8" x="0.5" y="0.5" width="130.0859375" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g332">
+											<rect id="r333" class="s0" x="0.5" y="0.5" width="130.0859375" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g60" transform="translate(708.484375,0)">
+						<g id="g61">
+							<g id="g64">
+								<g id="g65" at:id="1040" class="s4" onclick="nodeclick(1040)">
+									<g id="g334">
+										<rect id="r335" class="s10" x="0.5" y="0.5" width="109.039070129395" height="52.453125"/>
+										<g id="t336" transform="translate(3,3)">
+											<text id="ts337" x="0" y="11.484375" class="s6">Камалов Илдархан</text>
+											<text id="ts338" x="18.78515625" y="27.96875" class="s6">Мисбахович</text>
+											<text id="ts339" x="17.58984375" y="44.453125" class="s6">(25.08.1957)</text>
+										</g>
+									</g>
+									<rect id="r340" class="s8" x="0.5" y="0.5" width="109.039070129395" height="52.453125"/>
+								</g>
+							</g>
+							<g id="g62" transform="translate(130.0390625,0)">
+								<g id="g63" at:id="1045" class="s4" onclick="nodeclick(1045)">
+									<g id="g341" clip-path="url(#g350)">
+										<rect id="r342" class="s9" x="0.5" y="0.5" width="135.5234375" height="68.9375" rx="10" ry="10"/>
+										<g id="t343" transform="translate(3,3)">
+											<text id="ts344" x="0" y="11.484375" class="s6">Камалова (Нургалиева)</text>
+											<text id="ts345" x="52.576171875" y="27.96875" class="s6">Алсу</text>
+											<text id="ts346" x="30.83203125" y="44.453125" class="s6">(18.02.1958)</text>
+											<text id="ts347" x="45.9638671875" y="60.9375" class="s6">Внучка</text>
+										</g>
+									</g>
+									<rect id="r348" class="s8" x="0.5" y="0.5" width="135.5234375" height="68.9375" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g350">
+											<rect id="r351" class="s0" x="0.5" y="0.5" width="135.5234375" height="68.9375" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g102" transform="translate(1033.751953125,0)">
+					<g id="g103">
+						<g id="g104">
+							<g id="g107">
+								<g id="g108" at:id="1732" class="s4" onclick="nodeclick(1732)">
+									<g id="g352">
+										<rect id="r353" class="s10" x="0.5" y="0.5" width="85.5546875" height="52.453125"/>
+										<g id="t354" transform="translate(3,3)">
+											<text id="ts355" x="0" y="11.484375" class="s6">Салахов Ренат</text>
+											<text id="ts356" x="3.3251953125" y="27.96875" class="s6">Минхадеевич</text>
+											<text id="ts357" x="5.84765625" y="44.453125" class="s6">(04.04.1966)</text>
+										</g>
+									</g>
+									<rect id="r358" class="s8" x="0.5" y="0.5" width="85.5546875" height="52.453125"/>
+								</g>
+							</g>
+							<g id="g105" transform="translate(106.5546875,0)">
+								<g id="g106" at:id="1733" class="s4" onclick="nodeclick(1733)">
+									<g id="g359" clip-path="url(#g369)">
+										<rect id="r360" class="s9" x="0.5" y="0.5" width="141.79296875" height="85.421875" rx="10" ry="10"/>
+										<g id="t361" transform="translate(3,3)">
+											<text id="ts362" x="0" y="11.484375" class="s6">Салахова (Биктимирова)</text>
+											<text id="ts363" x="13.55859375" y="27.96875" class="s6">Гульфия Вазыховна</text>
+											<text id="ts364" x="33.966796875" y="44.453125" class="s6">(10.06.1968)</text>
+											<text id="ts365" x="45.6123046875" y="60.9375" class="s6">Биклянь</text>
+											<text id="ts366" x="49.0986328125" y="77.421875" class="s6">Внучка</text>
+										</g>
+									</g>
+									<rect id="r367" class="s8" x="0.5" y="0.5" width="141.79296875" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g369">
+											<rect id="r370" class="s0" x="0.5" y="0.5" width="141.79296875" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g114" transform="translate(1356.841796875,0)">
+					<g id="g115">
+						<g id="g116">
+							<g id="g119">
+								<g id="g120" at:id="1311" class="s4" onclick="nodeclick(1311)">
+									<g id="g371">
+										<rect id="r372" class="s10" x="0.5" y="0.5" width="94.765625" height="68.9375"/>
+										<g id="t373" transform="translate(3,3)">
+											<text id="ts374" x="0" y="11.484375" class="s6">Миникеев Ренат</text>
+											<text id="ts375" x="10.453125" y="27.96875" class="s6">(19.03.1972)</text>
+											<text id="ts376" x="9.3984375" y="44.453125" class="s6">Лениногорск</text>
+											<text id="ts377" x="24.4921875" y="60.9375" class="s6">Прораб</text>
+										</g>
+									</g>
+									<rect id="r378" class="s8" x="0.5" y="0.5" width="94.765625" height="68.9375"/>
+								</g>
+							</g>
+							<g id="g117" transform="translate(115.765625,0)">
+								<g id="g118" at:id="1318" class="s4" onclick="nodeclick(1318)">
+									<g id="g379" clip-path="url(#g390)">
+										<rect id="r380" class="s9" x="0.5" y="0.5" width="124.9296875" height="101.90625" rx="10" ry="10"/>
+										<g id="t381" transform="translate(3,3)">
+											<text id="ts382" x="29.6015625" y="11.484375" class="s6">Миникеева</text>
+											<text id="ts383" x="0" y="27.96875" class="s6">(Биктимирова) Лилия</text>
+											<text id="ts384" x="25.53515625" y="44.453125" class="s6">(11.05.1971)</text>
+											<text id="ts385" x="24.48046875" y="60.9375" class="s6">Лениногорск</text>
+											<text id="ts386" x="40.6669921875" y="77.421875" class="s6">Внучка</text>
+											<text id="ts387" x="32.2236328125" y="93.90625" class="s6">Бухгалтер</text>
+										</g>
+									</g>
+									<rect id="r388" class="s8" x="0.5" y="0.5" width="124.9296875" height="101.90625" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g390">
+											<rect id="r391" class="s0" x="0.5" y="0.5" width="124.9296875" height="101.90625" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g121" transform="translate(261.6953125,0)">
+						<g id="g122">
+							<g id="g125">
+								<g id="g126" at:id="765" class="s4" onclick="nodeclick(765)">
+									<g id="g392">
+										<rect id="r393" class="s10" x="0.5" y="0.5" width="110.990234375" height="52.453125"/>
+										<g id="t394" transform="translate(3,3)">
+											<text id="ts395" x="0" y="11.484375" class="s6">Давлетшин Рамиль</text>
+											<text id="ts396" x="18.5654296875" y="27.96875" class="s6">(12.02.1973)</text>
+											<text id="ts397" x="17.5107421875" y="44.453125" class="s6">Лениногорск</text>
+										</g>
+									</g>
+									<rect id="r398" class="s8" x="0.5" y="0.5" width="110.990234375" height="52.453125"/>
+								</g>
+							</g>
+							<g id="g123" transform="translate(131.990234375,0)">
+								<g id="g124" at:id="769" class="s4" onclick="nodeclick(769)">
+									<g id="g399" clip-path="url(#g409)">
+										<rect id="r400" class="s9" x="0.5" y="0.5" width="132.353515625" height="85.421875" rx="10" ry="10"/>
+										<g id="t401" transform="translate(3,3)">
+											<text id="ts402" x="29.4111328125" y="11.484375" class="s6">Давлетшина</text>
+											<text id="ts403" x="0" y="27.96875" class="s6">(Биктимирова) Альфия</text>
+											<text id="ts404" x="29.2470703125" y="44.453125" class="s6">(02.12.1973)</text>
+											<text id="ts405" x="28.1923828125" y="60.9375" class="s6">Лениногорск</text>
+											<text id="ts406" x="44.37890625" y="77.421875" class="s6">Внучка</text>
+										</g>
+									</g>
+									<rect id="r407" class="s8" x="0.5" y="0.5" width="132.353515625" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g409">
+											<rect id="r410" class="s0" x="0.5" y="0.5" width="132.353515625" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g147" transform="translate(1913.880859375,0)">
+					<g id="g148">
+						<g id="g149">
+							<g id="g154">
+								<g id="g155" at:id="1981" class="s4" onclick="nodeclick(1981)">
+									<g id="g411">
+										<rect id="r412" class="s10" x="0.5" y="0.5" width="128.31640625" height="52.453125"/>
+										<g id="t413" transform="translate(3,3)">
+											<text id="ts414" x="0" y="11.484375" class="s6">Хайретдинов Мунавир</text>
+											<text id="ts415" x="32.654296875" y="27.96875" class="s6">Разинович</text>
+											<text id="ts416" x="27.228515625" y="44.453125" class="s6">(01.07.1963)</text>
+										</g>
+									</g>
+									<rect id="r417" class="s8" x="0.5" y="0.5" width="128.31640625" height="52.453125"/>
+								</g>
+							</g>
+							<g id="g150" transform="translate(149.31640625,0)">
+								<g id="g151" at:id="1982" class="s4" onclick="nodeclick(1982)">
+									<g id="g418" clip-path="url(#g428)">
+										<rect id="r419" class="s9" x="0.5" y="0.5" width="145.794921875" height="85.421875" rx="10" ry="10"/>
+										<g id="t420" transform="translate(3,3)">
+											<text id="ts421" x="0" y="11.484375" class="s6">Хайретдинова (Сагитова)</text>
+											<text id="ts422" x="57.9375" y="27.96875" class="s6">Роза</text>
+											<text id="ts423" x="35.9677734375" y="44.453125" class="s6">(26.06.1964)</text>
+											<text id="ts424" x="15.474609375" y="60.9375" class="s6">Набережные Челны</text>
+											<text id="ts425" x="51.099609375" y="77.421875" class="s6">Внучка</text>
+										</g>
+									</g>
+									<rect id="r426" class="s8" x="0.5" y="0.5" width="145.794921875" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g428">
+											<rect id="r429" class="s0" x="0.5" y="0.5" width="145.794921875" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+							<g id="g152" transform="translate(316.111328125,0)">
+								<g id="g153" at:id="462" class="s4" onclick="nodeclick(462)">
+									<g id="g430">
+										<rect id="r431" class="s10" x="0.5" y="0.5" width="109.5078125" height="52.453125"/>
+										<g id="t432" transform="translate(3,3)">
+											<text id="ts433" x="0" y="11.484375" class="s6">Газетдинов Ильгиз</text>
+											<text id="ts434" x="16.3388671875" y="27.96875" class="s6">Миргаязович</text>
+											<text id="ts435" x="17.82421875" y="44.453125" class="s6">(01.01.1955)</text>
+										</g>
+									</g>
+									<rect id="r436" class="s8" x="0.5" y="0.5" width="109.5078125" height="52.453125"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g156" transform="translate(446.619140625,0)">
+						<g id="g157">
+							<g id="g160">
+								<g id="g161" at:id="1125" class="s4" onclick="nodeclick(1125)">
+									<g id="g437">
+										<rect id="r438" class="s10" x="0.5" y="0.5" width="103.8125" height="35.96875"/>
+										<g id="t439" transform="translate(3,3)">
+											<text id="ts440" x="0" y="11.484375" class="s6">Лотфуллин Рамис</text>
+											<text id="ts441" x="14.9765625" y="27.96875" class="s6">(20.11.1967)</text>
+										</g>
+									</g>
+									<rect id="r442" class="s8" x="0.5" y="0.5" width="103.8125" height="35.96875"/>
+								</g>
+							</g>
+							<g id="g158" transform="translate(124.8125,0)">
+								<g id="g159" at:id="1126" class="s4" onclick="nodeclick(1126)">
+									<g id="g443" clip-path="url(#g453)">
+										<rect id="r444" class="s9" x="0.5" y="0.5" width="136.37890625" height="85.421875" rx="10" ry="10"/>
+										<g id="t445" transform="translate(3,3)">
+											<text id="ts446" x="0" y="11.484375" class="s6">Лотфуллина (Сагитова)</text>
+											<text id="ts447" x="47.419921875" y="27.96875" class="s6">Гузель</text>
+											<text id="ts448" x="31.259765625" y="44.453125" class="s6">(30.09.1968)</text>
+											<text id="ts449" x="10.7666015625" y="60.9375" class="s6">Набережные Челны</text>
+											<text id="ts450" x="46.3916015625" y="77.421875" class="s6">Внучка</text>
+										</g>
+									</g>
+									<rect id="r451" class="s8" x="0.5" y="0.5" width="136.37890625" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g453">
+											<rect id="r454" class="s0" x="0.5" y="0.5" width="136.37890625" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g66" transform="translate(0,445.203125)">
+				<g id="g67">
+					<g id="g68">
+						<g id="g69">
+							<g id="g70">
+								<g id="g71" at:id="420" class="s4" onclick="nodeclick(420)">
+									<g id="g455" clip-path="url(#g462)">
+										<rect id="r456" class="s9" x="0.5" y="0.5" width="117.4296875" height="35.96875" rx="10" ry="10"/>
+										<g id="t457" transform="translate(3,3)">
+											<text id="ts458" x="0" y="11.484375" class="s6">Васильева Светлана</text>
+											<text id="ts459" x="26.7890625" y="27.96875" class="s6">Правнучка</text>
+										</g>
+									</g>
+									<rect id="r460" class="s8" x="0.5" y="0.5" width="117.4296875" height="35.96875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g462">
+											<rect id="r463" class="s0" x="0.5" y="0.5" width="117.4296875" height="35.96875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g72" transform="translate(138.4296875,0)">
+						<g id="g73">
+							<g id="g74">
+								<g id="g75" at:id="419" class="s4" onclick="nodeclick(419)">
+									<g id="g464" clip-path="url(#g471)">
+										<rect id="r465" class="s9" x="0.5" y="0.5" width="107.9375" height="35.96875" rx="10" ry="10"/>
+										<g id="t466" transform="translate(3,3)">
+											<text id="ts467" x="0" y="11.484375" class="s6">Васильева Наташа</text>
+											<text id="ts468" x="22.04296875" y="27.96875" class="s6">Правнучка</text>
+										</g>
+									</g>
+									<rect id="r469" class="s8" x="0.5" y="0.5" width="107.9375" height="35.96875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g471">
+											<rect id="r472" class="s0" x="0.5" y="0.5" width="107.9375" height="35.96875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g76" transform="translate(406.7744140625,0)">
+					<g id="g77">
+						<g id="g78">
+							<g id="g79">
+								<g id="g80" at:id="1582" class="s4" onclick="nodeclick(1582)">
+									<g id="g473">
+										<rect id="r474" class="s10" x="0.5" y="0.5" width="91.361328125" height="85.421875"/>
+										<g id="t475" transform="translate(3,3)">
+											<text id="ts476" x="0" y="11.484375" class="s6">Нургалиев Азат</text>
+											<text id="ts477" x="12.9990234375" y="27.96875" class="s6">Фаритович</text>
+											<text id="ts478" x="8.7509765625" y="44.453125" class="s6">(23.09.1987)</text>
+											<text id="ts479" x="24.140625" y="60.9375" class="s6">Казань</text>
+											<text id="ts480" x="20.1181640625" y="77.421875" class="s6">Правнук</text>
+										</g>
+									</g>
+									<rect id="r481" class="s8" x="0.5" y="0.5" width="91.361328125" height="85.421875"/>
+								</g>
+							</g>
+							<g id="g81" transform="translate(112.361328125,0)">
+								<g id="g82" at:id="1579" class="s4" onclick="nodeclick(1579)">
+									<g id="g482" clip-path="url(#g488)">
+										<rect id="r483" class="s9" x="0.5" y="0.5" width="110.36328125" height="34" rx="10" ry="10"/>
+										<g id="t484" transform="translate(3,3)">
+											<text id="ts485" x="0" y="11.484375" class="s6">Нургалеева Резеда</text>
+										</g>
+									</g>
+									<rect id="r486" class="s8" x="0.5" y="0.5" width="110.36328125" height="34" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g488">
+											<rect id="r489" class="s0" x="0.5" y="0.5" width="110.36328125" height="34" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g89" transform="translate(680.74072265625,0)">
+					<g id="g90">
+						<g id="g91">
+							<g id="g92">
+								<g id="g93" at:id="1041" class="s4" onclick="nodeclick(1041)">
+									<g id="g490">
+										<rect id="r491" class="s10" x="0.5" y="0.5" width="90.1015625" height="68.9375"/>
+										<g id="t492" transform="translate(3,3)">
+											<text id="ts493" x="0" y="11.484375" class="s6">Камалов Илнар</text>
+											<text id="ts494" x="2.8447265625" y="27.96875" class="s6">Илдарханович</text>
+											<text id="ts495" x="8.12109375" y="44.453125" class="s6">(25.02.1981)</text>
+											<text id="ts496" x="19.48828125" y="60.9375" class="s6">Правнук</text>
+										</g>
+									</g>
+									<rect id="r497" class="s8" x="0.5" y="0.5" width="90.1015625" height="68.9375"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g94" transform="translate(111.1015625,0)">
+						<g id="g95">
+							<g id="g96">
+								<g id="g97" at:id="1757" class="s4" onclick="nodeclick(1757)">
+									<g id="g498" clip-path="url(#g507)">
+										<rect id="r499" class="s9" x="0.5" y="0.5" width="124.4609375" height="68.9375" rx="10" ry="10"/>
+										<g id="t500" transform="translate(3,3)">
+											<text id="ts501" x="5.4111328125" y="11.484375" class="s6">Сафина (Камалова)</text>
+											<text id="ts502" x="0" y="27.96875" class="s6">Гульназ Илдарханова</text>
+											<text id="ts503" x="25.30078125" y="44.453125" class="s6">(25.03.1982)</text>
+											<text id="ts504" x="30.3046875" y="60.9375" class="s6">Правнучка</text>
+										</g>
+									</g>
+									<rect id="r505" class="s8" x="0.5" y="0.5" width="124.4609375" height="68.9375" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g507">
+											<rect id="r508" class="s0" x="0.5" y="0.5" width="124.4609375" height="68.9375" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g98" transform="translate(256.5625,0)">
+						<g id="g99">
+							<g id="g100">
+								<g id="g101" at:id="1037" class="s4" onclick="nodeclick(1037)">
+									<g id="g509">
+										<rect id="r510" class="s10" x="0.5" y="0.5" width="100.724617004395" height="68.9375"/>
+										<g id="t511" transform="translate(3,3)">
+											<text id="ts512" x="0" y="11.484375" class="s6">Камалов Альберт</text>
+											<text id="ts513" x="8.15625" y="27.96875" class="s6">Илдарханович</text>
+											<text id="ts514" x="13.4326171875" y="44.453125" class="s6">(27.05.1985)</text>
+											<text id="ts515" x="24.7998046875" y="60.9375" class="s6">Правнук</text>
+										</g>
+									</g>
+									<rect id="r516" class="s8" x="0.5" y="0.5" width="100.724617004395" height="68.9375"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g109" transform="translate(1082.103515625,0)">
+					<g id="g110">
+						<g id="g111">
+							<g id="g112">
+								<g id="g113" at:id="1730" class="s4" onclick="nodeclick(1730)">
+									<g id="g517">
+										<rect id="r518" class="s10" x="0.5" y="0.5" width="95.40625" height="52.453125"/>
+										<g id="t520" transform="translate(3,3)">
+											<text id="ts521" x="9" y="11.484375" class="s6">Салахов Радик</text>
+											<text id="ts522" x="2.001953125" y="27.96875" class="s6">(02.04.1990 - ?)</text>
+											<text id="ts523" x="22.140625" y="44.453125" class="s6">Правнук</text>
+										</g>
+										<polygon id="p519" class="s7" points="1,14 1,7 7,1 14,1 "/>
+									</g>
+									<rect id="r524" class="s8" x="0.5" y="0.5" width="95.40625" height="52.453125"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g127" transform="translate(1208.509765625,0)">
+					<g id="g128">
+						<g id="g129">
+							<g id="g132">
+								<g id="g133" at:id="221" class="s4" onclick="nodeclick(221)">
+									<g id="g525">
+										<rect id="r526" class="s10" x="0.5" y="0.5" width="105.201171875" height="68.9375"/>
+										<g id="t527" transform="translate(3,3)">
+											<text id="ts528" x="0" y="11.484375" class="s6">Ахметзянов Раиль</text>
+											<text id="ts529" x="17.8388671875" y="27.96875" class="s6">Равильевич</text>
+											<text id="ts530" x="15.6708984375" y="44.453125" class="s6">(26.02.1996)</text>
+											<text id="ts531" x="31.060546875" y="60.9375" class="s6">Казань</text>
+										</g>
+									</g>
+									<rect id="r532" class="s8" x="0.5" y="0.5" width="105.201171875" height="68.9375"/>
+								</g>
+							</g>
+							<g id="g130" transform="translate(126.201171875,0)">
+								<g id="g131" at:id="1323" class="s4" onclick="nodeclick(1323)">
+									<g id="g533" clip-path="url(#g543)">
+										<rect id="r534" class="s9" x="0.5" y="0.5" width="121.26171875" height="85.421875" rx="10" ry="10"/>
+										<g id="t535" transform="translate(3,3)">
+											<text id="ts536" x="12.416015625" y="11.484375" class="s6">Миникеева Алия</text>
+											<text id="ts537" x="23.701171875" y="27.96875" class="s6">(08.09.1996)</text>
+											<text id="ts538" x="39.0908203125" y="44.453125" class="s6">Казань</text>
+											<text id="ts539" x="28.705078125" y="60.9375" class="s6">Правнучка</text>
+											<text id="ts540" x="0" y="77.421875" class="s6">Учитель английского</text>
+										</g>
+									</g>
+									<rect id="r541" class="s8" x="0.5" y="0.5" width="121.26171875" height="85.421875" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g543">
+											<rect id="r544" class="s0" x="0.5" y="0.5" width="121.26171875" height="85.421875" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g134" transform="translate(268.462890625,0)">
+						<g id="g135">
+							<g id="g136">
+								<g id="g137" at:id="1300" class="s4" onclick="nodeclick(1300)">
+									<g id="g545">
+										<rect id="r546" class="s10" x="0.5" y="0.5" width="103.800788879395" height="68.9375"/>
+										<g id="t547" transform="translate(3,3)">
+											<text id="ts548" x="0" y="11.484375" class="s6">Миникеев Камиль</text>
+											<text id="ts549" x="14.970703125" y="27.96875" class="s6">(26.10.2000)</text>
+											<text id="ts550" x="30.3603515625" y="44.453125" class="s6">Казань</text>
+											<text id="ts551" x="26.337890625" y="60.9375" class="s6">Правнук</text>
+										</g>
+									</g>
+									<rect id="r552" class="s8" x="0.5" y="0.5" width="103.800788879395" height="68.9375"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g138" transform="translate(1622.357421875,0)">
+					<g id="g139">
+						<g id="g140">
+							<g id="g141">
+								<g id="g142" at:id="766" class="s4" onclick="nodeclick(766)">
+									<g id="g553">
+										<rect id="r554" class="s10" x="0.5" y="0.5" width="108.67578125" height="68.9375"/>
+										<g id="t555" transform="translate(3,3)">
+											<text id="ts556" x="0" y="11.484375" class="s6">Давлетшин Рустам</text>
+											<text id="ts557" x="17.408203125" y="27.96875" class="s6">(29.01.2001)</text>
+											<text id="ts558" x="16.353515625" y="44.453125" class="s6">Лениногорск</text>
+											<text id="ts559" x="28.775390625" y="60.9375" class="s6">Правнук</text>
+										</g>
+									</g>
+									<rect id="r560" class="s8" x="0.5" y="0.5" width="108.67578125" height="68.9375"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g143" transform="translate(129.67578125,0)">
+						<g id="g144">
+							<g id="g145">
+								<g id="g146" at:id="771" class="s4" onclick="nodeclick(771)">
+									<g id="g561" clip-path="url(#g570)">
+										<rect id="r562" class="s9" x="0.5" y="0.5" width="102.65234375" height="68.9375" rx="10" ry="10"/>
+										<g id="t563" transform="translate(3,3)">
+											<text id="ts564" x="0" y="11.484375" class="s6">Давлетшина Алсу</text>
+											<text id="ts565" x="14.396484375" y="27.96875" class="s6">(11.07.2003)</text>
+											<text id="ts566" x="13.341796875" y="44.453125" class="s6">Лениногорск</text>
+											<text id="ts567" x="19.400390625" y="60.9375" class="s6">Правнучка</text>
+										</g>
+									</g>
+									<rect id="r568" class="s8" x="0.5" y="0.5" width="102.65234375" height="68.9375" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g570">
+											<rect id="r571" class="s0" x="0.5" y="0.5" width="102.65234375" height="68.9375" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g162" transform="translate(1992.353515625,0)">
+					<g id="g163">
+						<g id="g164">
+							<g id="g165">
+								<g id="g166" at:id="1980" class="s4" onclick="nodeclick(1980)">
+									<g id="g572">
+										<rect id="r573" class="s10" x="0.5" y="0.5" width="120.6875" height="52.453125"/>
+										<g id="t574" transform="translate(3,3)">
+											<text id="ts575" x="0" y="11.484375" class="s6">Хайретдинов Ильдар</text>
+											<text id="ts576" x="23.4140625" y="27.96875" class="s6">(02.02.1983)</text>
+											<text id="ts577" x="34.78125" y="44.453125" class="s6">Правнук</text>
+										</g>
+									</g>
+									<rect id="r578" class="s8" x="0.5" y="0.5" width="120.6875" height="52.453125"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g id="g167" transform="translate(2360.37255859375,0)">
+					<g id="g168">
+						<g id="g169">
+							<g id="g170">
+								<g id="g171" at:id="1124" class="s4" onclick="nodeclick(1124)">
+									<g id="g579">
+										<rect id="r580" class="s10" x="0.5" y="0.5" width="105.523445129395" height="52.453125"/>
+										<g id="t581" transform="translate(3,3)">
+											<text id="ts582" x="0" y="11.484375" class="s6">Лотфуллин Карим</text>
+											<text id="ts583" x="15.83203125" y="27.96875" class="s6">(17.04.2000)</text>
+											<text id="ts584" x="27.19921875" y="44.453125" class="s6">Правнук</text>
+										</g>
+									</g>
+									<rect id="r585" class="s8" x="0.5" y="0.5" width="105.523445129395" height="52.453125"/>
+								</g>
+							</g>
+						</g>
+					</g>
+					<g id="g172" transform="translate(126.523445129395,0)">
+						<g id="g173">
+							<g id="g174">
+								<g id="g175" at:id="1123" class="s4" onclick="nodeclick(1123)">
+									<g id="g586">
+										<rect id="r587" class="s10" x="0.5" y="0.5" width="99.189453125" height="52.453125"/>
+										<g id="t588" transform="translate(3,3)">
+											<text id="ts589" x="0" y="11.484375" class="s6">Лотфуллин Амир</text>
+											<text id="ts590" x="12.6650390625" y="27.96875" class="s6">(20.04.2003)</text>
+											<text id="ts591" x="24.0322265625" y="44.453125" class="s6">Правнук</text>
+										</g>
+									</g>
+									<rect id="r592" class="s8" x="0.5" y="0.5" width="99.189453125" height="52.453125"/>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g id="g83" transform="translate(0,571.625)">
+				<g id="g84" transform="translate(455.484375,0)">
+					<g id="g85">
+						<g id="g86">
+							<g id="g87">
+								<g id="g88" at:id="1581" class="s4" onclick="nodeclick(1581)">
+									<g id="g593" clip-path="url(#g602)">
+										<rect id="r594" class="s9" x="0.5" y="0.5" width="106.302734375" height="68.9375" rx="10" ry="10"/>
+										<g id="t595" transform="translate(3,3)">
+											<text id="ts596" x="0" y="11.484375" class="s6">Нургалеева Элина</text>
+											<text id="ts597" x="25.4267578125" y="27.96875" class="s6">Азатовна</text>
+											<text id="ts598" x="16.2216796875" y="44.453125" class="s6">(18.09.2019)</text>
+											<text id="ts599" x="11.37890625" y="60.9375" class="s6">Праправнучка</text>
+										</g>
+									</g>
+									<rect id="r600" class="s8" x="0.5" y="0.5" width="106.302734375" height="68.9375" rx="10" ry="10"/>
+									<defs>
+										<clipPath id="g602">
+											<rect id="r603" class="s0" x="0.5" y="0.5" width="106.302734375" height="68.9375" rx="10" ry="10"/>
+										</clipPath>
+									</defs>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
+</body>
+</html>
